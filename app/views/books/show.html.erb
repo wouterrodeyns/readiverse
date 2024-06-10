@@ -1,0 +1,24 @@
+<h1>Book by ID</h1>
+
+<ul>
+    <li>
+      Title: <%= @book.title %>
+    </li>
+    <li>
+       Author: <%= @book.author %>
+    </li>
+    <li>
+      Publish Date: <%= @book.publish_date %>
+    </li>
+    <li>
+      Genre: <%= @book.genre %>
+    </li>
+    <li>
+      ISBN: <%= @book.isbn %>
+    </li>
+    <li><%= link_to "Edit", edit_book_path(@book) %></li>
+    <li> <%= link_to "Destroy", book_path(@book), data: {
+      turbo_method: 'delete',
+      turbo_confirm: 'Are you sure?',
+    } %></li>
+</ul>

@@ -3,19 +3,22 @@
 <ul>
   <% @books.each do |book| %>
     <li>
-      <%= book.title %>
+      Title: <%= link_to book.title, book %>
     </li>
     <li>
-      <%= book.author %>
+      Author: <%= book.author %>
     </li>
     <li>
-      <%= book.publish_date %>
+      Publish Date: <%= book.publish_date %>
     </li>
     <li>
-      <%= book.genre %>
+      Genre: <%= book.genre %>
     </li>
     <li>
-      <%= book.isbn %>
+      ISBN: <%= book.isbn %>
     </li>
+    <br>
   <% end %>
 </ul>
+
+<%= link_to "New Book", new_book_path %>
